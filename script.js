@@ -1,5 +1,5 @@
 jQuery(function($) {
-  setTimeout(function() {
+  $('#go').on('click', function() {
     navigator.bluetooth.requestDevice({ acceptAllDevices: true })
     .then(function(device) {
       // Step 2: Connect to it
@@ -8,5 +8,5 @@ jQuery(function($) {
     .catch(function(error) {
       console.error(error);
     })
-  }, 2000)
+  });
 });
